@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br>
+            <hr>
+            <form action="" (ngSubmit)="login(l2)" #l2="ngForm">
+                <div class="form-group">
+                    <label for="username">Username:
+                        <input type="text" id="username" name="username" ngModel class="form-control">
+                    </label>
+                    <br>
+                    <br>
+                    <label for="password">Password:
+                        <input type="password" id="password" name="password" ngModel class="form-control">
+                    </label>
+                    <br>
+                    <br>
+                </div>
+
+                <button type="submit" class="btn btn-danger">Login</button>
+            </form>
+            <br>
+            <span style="color: red;" *ngIf="errorFlag">{{errorMessage}}</span>
+        </div>
+
+    </div>
+</div>

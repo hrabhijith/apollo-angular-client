@@ -1,0 +1,65 @@
+<h3>GraphQL Client - Angular</h3>
+<hr>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8">
+            <br>
+            <hr>
+            <h4>Query</h4>
+
+            <form action="" (ngSubmit)="doGetQuerySpecific(p2)" #p2="ngForm">
+                <div class="form-check">
+                    <input type="checkbox" name="name" id="name" value="name" ngModel class="form-check-input">
+                    <label class="form-check-label" for="name">Name</label>
+                </div>
+                <br>
+                <div class="form-check">
+                    <input type="checkbox" name="options" id="options" value="options" ngModel class="form-check-input">
+                    <label class="form-check-label" for="options">Options</label>
+                </div>
+
+                <br>
+                <br>
+                <button type="submit" class="btn btn-danger">Get</button>
+            </form>
+
+
+            <br>
+            <hr>
+            <h4>Mutation</h4>
+            <form action="" (ngSubmit)="doPostQuery(p1)" #p1="ngForm">
+                <div class="form-group">
+                    <label for="name">Name:
+                        <input type="text" id="name" name="name" ngModel class="form-control">
+                    </label>
+                    <br>
+                    <br>
+                    <label for="options"> Options:
+                        <input type="text" id="options" name="selectionId" placeholder="Selection ID" ngModel class="form-control">
+                        <input type="text" id="options" name="value" placeholder="Value" ngModel class="form-control">
+                    </label>
+                    <br>
+                    <br>
+                </div>
+
+                <button type="submit" class="btn btn-danger">Post</button>
+            </form>
+            <br>
+
+            <h3>The result from the queries will be displayed below, once the button is clicked</h3>
+            <div>{{toHTML}}</div>
+        </div>
+        <!-- <div class="col-sm-4">
+            <div class="container" style="border: 1px solid black; height: 300px; width: 500px;" >
+                RASA chat window here!!
+            </div>
+        </div> -->
+
+    </div>
+    <!-- <br>
+    <button (click)="getAuthToken()" class="btn btn-primary">Geth Auth token</button>
+    <br>
+    <br>
+    <button (click)="getRefreshToken()" class="btn btn-primary">Refresh Auth token</button> -->
+</div>
